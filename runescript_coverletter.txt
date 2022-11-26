@@ -1,15 +1,15 @@
-[coverletter,introduction]
+[label,introduction]
 // Not sure if this is the correct animation?
 anim(human_wave,0);
 ~chatplayer("<p,happy>Hello, I am writing to whomever it may concern.");
 def_bool $righttowork = false;
-if ($righttowork = ^false) {
+if ($righttowork = false) {
 	~chatplayer("<p,sad>I unfortunately do not currently have a right-to-work in the UK.");
 	~chatplayer("<p,happy>Though, with your help, I am happy to work towards a visa.");
 }
 @aboutme;
 
-[coverletter,aboutme]
+[label,aboutme]
 def_int $years = 12;
 def_string $games = "mostly roguelikes but also grindy MMOs";
 // Is this how we display inline variables? I've seen two different examples, one using ",$years," and the other using <$years>.
@@ -32,7 +32,7 @@ anim(human_laugh,0);
 ~chatplayer("<p,neutral>As for game development, I have worked on a few smaller projects myself, but none that have really become anything.");
 @whatibring;
 
-[coverletter,whatibring]
+[label,whatibring]
 def_string $portfolio = "https://ensnack.github.io/SC-Portfolio/"
 ~chatplayer("<p,neutral>I feel that with my experience in programming, I would be able to bring the following to your company:");
 ~mesbox("Experience in agile development methods after having actively used them during university classes and projects.");
@@ -45,7 +45,7 @@ def_string $portfolio = "https://ensnack.github.io/SC-Portfolio/"
 anim(human_bow,0);
 @ending;
 
-[coverletter,ending]
+[label,ending]
 anim(human_wave,0);
 ~chatplayer("<p,happy>Thank you for taking the time reading this.");
 ~chatplayer("<p,sad>I understand that this was mostly player chats, but I tried using as much of the syntax as made sense.");
