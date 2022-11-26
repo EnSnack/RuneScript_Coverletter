@@ -1,0 +1,55 @@
+[coverletter,introduction]
+// Not sure if this is the correct animation?
+anim(human_wave,0);
+~chatplayer("<p,happy>Hello, I am writing to whomever it may concern.");
+def_bool $righttowork = false;
+if ($righttowork = ^false) {
+	~chatplayer("<p,sad>I unfortunately do not currently have a right-to-work in the UK.");
+	~chatplayer("<p,happy>Though, with your help, I am happy to work towards a visa.");
+}
+@aboutme;
+
+[coverletter,aboutme]
+def_int $years = 12;
+def_string $games = "mostly roguelikes but also grindy MMOs";
+// Is this how we display inline variables? I've seen two different examples, one using ",$years," and the other using <$years>.
+~chatplayer("<p,neutral>I have been a hobbyist programmer since I was young, and have programmed for up towards <$years> years.");
+~chatnpc("<p,quiz>What about programming do you most enjoy?");
+// This animation might not exist.
+anim(human_think,0);
+~chatplayer("<p,neutral>My favourite part of programming is challenging myself on new fronts and learning new technologies.");
+~chatplayer("<p,happy>I always find that when there's something new to learn, I really involve myself in that subject.");
+anim(human_laugh,0);
+~chatplayer("<p,laugh>Sometimes maybe a bit too much!");
+~chatnpc("<p,quiz>Who do you program for?");
+~chatplayer("<p,neutral>In most cases myself, but I have developed minor solutions to friends and relatives to simplify their lives.");
+~chatplayer("<p,happy>I work on a lot of small-scale projects..");
+~chatnpc("<p,quiz>What's your knowledge in games and game development in general?");
+anim(human_laugh,0);
+~chatplayer("<p,happy>I play a lot of games, <$games>. In fact, the grinding in OSRS is what I enjoy the most.");
+~chatplayer("<p,laugh>I say this as I have just leveled from 53 to 80 crafting consecutively by blowing lantern lenses.");
+~chatplayer("<p,neutral>I also used to be highly competitive in World of Warcraft retail, doing high-end mythic raiding in 3 expansions.");
+~chatplayer("<p,neutral>As for game development, I have worked on a few smaller projects myself, but none that have really become anything.");
+@whatibring;
+
+[coverletter,whatibring]
+def_string $portfolio = "https://ensnack.github.io/SC-Portfolio/"
+~chatplayer("<p,neutral>I feel that with my experience in programming, I would be able to bring the following to your company:");
+~mesbox("Experience in agile development methods after having actively used them during university classes and projects.");
+~mesbox("Deep adaptability due to a wide array of languages I have played around with. I am quick to learn and love to do so too.");
+~mesbox("Deep experience in OSRS since I have a high level HCIM, along with a GIM and a normal character. Ironman btw.");
+~mesbox("Avid gamer who has experience with a wide array of games, both related to the MMO genre, but also other types.");
+~chatplayer("<p,happy>I have an ever-expanding portfolio you can find at <$portfolio> , please check it out!");
+~chatplayer("<p,happy>I hope with all this in mind, you will consider me for a follow-up interview!");
+~chatplayer("<p,happy>It would truly be the perfect opportunity to further show my skill set off!");
+anim(human_bow,0);
+@ending;
+
+[coverletter,ending]
+anim(human_wave,0);
+~chatplayer("<p,happy>Thank you for taking the time reading this.");
+~chatplayer("<p,sad>I understand that this was mostly player chats, but I tried using as much of the syntax as made sense.");
+~chatplayer("<p,happy>Hope to hear from you!");
+~mesbox("Signed and Sincerely,");
+~mesbox("Steffen Christensen.");
+return;
