@@ -1,5 +1,5 @@
 [label,introduction]
-// Not sure if this is the correct animation?
+// Not sure if this is the correct animation? Also not sure what 0 is in this case.
 anim(human_wave,0);
 ~chatplayer("<p,happy>Hello, I am writing to whomever it may concern.");
 def_bool $righttowork = false;
