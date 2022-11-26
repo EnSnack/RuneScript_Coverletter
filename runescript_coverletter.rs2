@@ -52,4 +52,22 @@ anim(human_wave,0);
 ~chatplayer("<p,happy>Hope to hear from you!");
 ~mesbox("Signed and Sincerely,");
 ~mesbox("Steffen Christensen.");
+~chatplayer("<p,neutral>Finally, before I go, I've coded a little thing for my own personal challenge.");
+~chatplayer("<p,neutral>I previously made an integer reverser in JavaScript. I have, with my limited RuneScript knowledge...");
+~chatplayer("<p,neutral>Also made it in RuneScript, given I had no way of testing it, but I do hope it works correctly.");
+if(~reverseinteger(123) = 321) ~mesbox("123 correctly became 321");
+if(~reverseinteger(-66113) = -31166) ~mesbox("-66113 correctly became -31166");
+if(~reverseinteger(0) = 0) ~mesbox("0 correctly became 0");
+if(~reverseinteger(2147483645) = 0) ~mesbox("2147483645 correctly became 0");
+~chatplayer("<p,happy>That was it! Thank you again!");
 return;
+
+[label,reverseinteger](int $x)(int)
+if ($x = 0) return(0);
+def_int $num = 0;
+while($x > 0 | $x < 0) {
+	$num = add(multiply($num,10),calc($x%10));
+	if($num <= -2147483645 | $num >= 2147483645) return(0);
+	$x = divide($x,10);
+}
+return($num);
