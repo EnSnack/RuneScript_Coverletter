@@ -1,0 +1,17 @@
+[label,fizzbuzz]
+def_int $i = 1;
+def_string $display = "";
+while($i < 101) {
+	$display = "";
+	if(modulo($i,3) = 0) {
+		$display = "Fizz";
+	}
+	if(modulo($i,5) = 0) {
+		$display = "<$display>Buzz";
+	}
+	if($display = "") {
+		$display = "<$i>";
+	}
+	~mes("<$display>");
+	$i = add($i,1);
+}

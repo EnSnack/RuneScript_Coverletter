@@ -66,7 +66,7 @@ return;
 if ($x = 0) return(0);
 def_int $num = 0;
 while($x > 0 | $x < 0) {
-	$num = add(multiply($num,10),calc($x%10));
+	$num = add(multiply($num,10),modulo($x,10));
 	if($num <= -2147483645 | $num >= 2147483645) return(0);
 	$x = divide($x,10);
 }
