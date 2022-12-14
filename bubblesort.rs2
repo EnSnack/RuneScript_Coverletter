@@ -1,0 +1,27 @@
+// Non-recursive bubblesort, uncertain if componentarray has inbuilt length functionality to remove $len.
+// Based on Ash's QuickSort algorithm at https://twitter.com/JagexAsh/status/1173548090294513665
+// Runs at O(n^2)
+[label,bubblesort](componentarray $list, int $len)
+def_int $i = 0;
+def_int $j = 0;
+def_bool $swap = false;
+def_component $temp = null;
+while($i < $len) {
+	$swap = false;
+	
+	while($j < $len) {
+		if(compare(lowercase(if_gettext($list($j))),lowercase(if_gettext($list(add($j,1))))) <= 0) {
+			$temp = $list($j);
+			$list($j) = $list(add($j,1));
+			$list(add($j,1)) = $temp;
+			$swap = true;
+		}
+		$j = add($j,1);
+	}
+	
+	if($swap = false) {
+		return;
+	}
+	
+	$i = add($i,1);
+}

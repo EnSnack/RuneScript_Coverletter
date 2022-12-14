@@ -2,7 +2,6 @@
 def_int $i = 1;
 def_string $display = "";
 while($i < 101) {
-	$display = "";
 	if(modulo($i,3) = 0) {
 		$display = "Fizz";
 	}
@@ -13,5 +12,6 @@ while($i < 101) {
 		$display = "<$i>";
 	}
 	~mes("<$display>");
+	$display = "";
 	$i = add($i,1);
 }
