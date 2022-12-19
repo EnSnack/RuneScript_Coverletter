@@ -1,0 +1,8 @@
+[label,palindromeinteger](int $x)(bool)
+if ($x < 0 | (modulo($x,10)=0 & $x != 0) | ($x <= -2147483645 | $x >= 2147483645)) return(false);
+def_int $num = 0;
+while($x > $num) {
+	$num = add(multiply($num,10),modulo($x,10))
+	$x = divide($x,10);
+}
+return($x = $num | $x = divide($num,10));
