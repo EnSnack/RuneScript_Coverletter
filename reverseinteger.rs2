@@ -1,3 +1,6 @@
+// reverseinteger reverses an integer
+// @param {int} x
+// @return {int}
 [label,reverseinteger](int $x)(int)
 if ($x = 0) return(0);
 def_int $num = 0;

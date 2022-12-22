@@ -1,0 +1,10 @@
+// integerlen returns the length of an integer
+// @param {int} x
+// @return {int}
+[label,integerlen](int $x)(int)
+def_int $len = 1;
+while($x >= 10) {
+	$x = divide($x,10);
+	$len = add($len,1);
+}
+return($len);

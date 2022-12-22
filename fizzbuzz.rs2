@@ -1,3 +1,4 @@
+// fizzbuzz standard fizzbuzz in runescript, not sure if mes is the best way to show it.
 [label,fizzbuzz]
 def_int $i = 1;
 def_string $display = "";
