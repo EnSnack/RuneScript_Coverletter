@@ -2,8 +2,8 @@
 // @param {int} x
 // @return {int}
 [label,integerlen](int $x)(int)
-def_int $len = 1;
-while($x >= 10) {
+def_int $len = 0;
+while($x > 0 | $x < 0) {
 	$x = divide($x,10);
 	$len = add($len,1);
 }
